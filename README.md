@@ -10,8 +10,8 @@
 
 ## Download
 
+- **[CurseForge](https://www.curseforge.com/wow/addons/party-role-icons-display-group-roles)**
 - **[Latest release](https://github.com/Mouchoir/PartyRoleIcons/releases/latest)** - grab the zip and drop the `PartyRoleIcons` folder into `Interface\AddOns`.
-- CurseForge: coming soon.
 
 ## What it does
 

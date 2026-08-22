@@ -3,6 +3,9 @@
 Kept here so the project page and the README cannot drift apart. Paste the two
 blocks below into the CurseForge project, using its Markdown editor.
 
+Project id `1663788`, slug `party-role-icons-display-group-roles`, uploaded to by
+the `publish-curseforge.yml` workflow.
+
 Categories: Unit Frames, Group and Raid.
 Tags: party frames, role icons, tank, healer, unit frames, dungeon.
 
