@@ -1,0 +1,11 @@
+{
+  "name": "party-role-icons",
+  "private": true,
+  "description": "Test harness for the Party Role Icons WoW addon",
+  "scripts": {
+    "test": "node tests/run.js modern && node tests/run.js legacy && node tests/run.js pool && node tests/run.js modern frFR && node tests/run.js legacy enUS talents vanilla && node tests/run.js legacy frFR talents modern"
+  },
+  "devDependencies": {
+    "fengari": "^0.1.4"
+  }
+}

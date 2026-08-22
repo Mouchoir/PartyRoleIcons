@@ -1,0 +1,12 @@
+## Interface: 11509
+## Title: Party Role Icons
+## Notes: Tank, healer and damage icons on the player and party portraits, retail style.
+## Title-frFR: Party Role Icons
+## Notes-frFR: Icônes de tank, soigneur et dps sur les portraits du joueur et du groupe, façon retail.
+## Author: Mouchoir
+## Version: 1.6.1
+## IconTexture: Interface\AddOns\PartyRoleIcons\Media\Icon.tga
+## SavedVariables: PartyRoleIconsDB
+
+PartyRoleIcons.lua
+Options.lua
