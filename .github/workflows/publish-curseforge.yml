@@ -78,7 +78,18 @@ jobs:
           else
             tag="${{ inputs.tag }}"
             release_type="${{ inputs.release_type }}"
-            printf 'Manual CurseForge upload for %s\n' "$tag" > "$RUNNER_TEMP/CHANGELOG.md"
+            # Reuse the notes of the GitHub release carrying that tag, so a manual
+            # upload reads the same as one triggered by the release itself.
+            body="$(curl -sf \
+              --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              --header "Accept: application/vnd.github+json" \
+              "${{ github.api_url }}/repos/${{ github.repository }}/releases/tags/$tag" \
+              | jq -r '.body // ""')" || body=""
+            if [[ -n "$body" ]]; then
+              printf '%s\n' "$body" > "$RUNNER_TEMP/CHANGELOG.md"
+            else
+              printf 'Manual CurseForge upload for %s\n' "$tag" > "$RUNNER_TEMP/CHANGELOG.md"
+            fi
           fi
 
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
